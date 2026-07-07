@@ -30,31 +30,31 @@ const ARQUIVOS_CACHE = [
 
 
 
-    "./js/state.js",
+    "./state.js",
 
 
-    "./js/utils.js",
+    "./utils.js",
 
 
-    "./js/auth.js",
+    "./auth.js",
 
 
-    "./js/firebase.js",
+    "./firebase.js",
 
 
-    "./js/nav.js",
+    "./nav.js",
 
 
-    "./js/cpa.js",
+    "./cpa.js",
 
 
-    "./js/boletim.js",
+    "./boletim.js",
 
 
-    "./js/escola.js",
+    "./escola.js",
 
 
-    "./js/aluno.js"
+    "./aluno.js"
 
 
 
