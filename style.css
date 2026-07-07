@@ -1,0 +1,2895 @@
+/* ==================================
+   SISTEMA CPA4 - STYLE.CSS
+   Design profissional responsivo
+================================== */
+
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family:
+
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+}
+
+
+
+
+:root {
+
+
+    --cor-principal:
+
+    #1565c0;
+
+
+    --cor-secundaria:
+
+    #0d47a1;
+
+
+    --cor-fundo:
+
+    #f4f6f9;
+
+
+    --cor-card:
+
+    #ffffff;
+
+
+    --cor-texto:
+
+    #333;
+
+
+    --cor-sucesso:
+
+    #2e7d32;
+
+
+    --cor-erro:
+
+    #c62828;
+
+
+}
+
+
+
+
+
+
+
+body {
+
+
+    background:
+
+    var(--cor-fundo);
+
+
+    color:
+
+    var(--cor-texto);
+
+
+    min-height:
+
+    100vh;
+
+
+}
+
+
+
+
+
+
+
+
+/* ==================================
+   CABEÇALHO
+================================== */
+
+
+.top-header {
+
+
+    height:
+
+    65px;
+
+
+    background:
+
+    var(--cor-principal);
+
+
+    color:
+
+    white;
+
+
+    display:
+
+    flex;
+
+
+    align-items:
+
+    center;
+
+
+    justify-content:
+
+    space-between;
+
+
+    padding:
+
+    0 20px;
+
+
+    position:
+
+    fixed;
+
+
+    top:
+
+    0;
+
+
+    left:
+
+    0;
+
+
+    right:
+
+    0;
+
+
+    z-index:
+
+    1000;
+
+
+}
+
+
+
+
+
+
+
+
+.logo h1 {
+
+
+    font-size:
+
+    28px;
+
+
+}
+
+
+
+
+
+.logo span {
+
+
+    font-size:
+
+    12px;
+
+
+    opacity:
+
+    .9;
+
+
+}
+
+
+
+
+
+
+
+
+.menu-btn {
+
+
+    background:
+
+    transparent;
+
+
+    border:
+
+    none;
+
+
+    color:
+
+    white;
+
+
+    font-size:
+
+    28px;
+
+
+    cursor:
+
+    pointer;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   MENU LATERAL
+================================== */
+
+
+.sidebar {
+
+
+    position:
+
+    fixed;
+
+
+    top:
+
+    65px;
+
+
+    left:
+
+    0;
+
+
+    width:
+
+    250px;
+
+
+    height:
+
+    calc(100vh - 65px);
+
+
+    background:
+
+    white;
+
+
+    box-shadow:
+
+    2px 0 10px rgba(
+
+        0,
+
+        0,
+
+        0,
+
+        .1
+
+    );
+
+
+    padding:
+
+    15px;
+
+
+    transition:
+
+    .3s;
+
+
+    z-index:
+
+    900;
+
+
+}
+
+
+
+
+
+.sidebar button {
+
+
+    width:
+
+    100%;
+
+
+    padding:
+
+    14px;
+
+
+    margin-bottom:
+
+    8px;
+
+
+    border:
+
+    none;
+
+
+    background:
+
+    transparent;
+
+
+    text-align:
+
+    left;
+
+
+    cursor:
+
+    pointer;
+
+
+    border-radius:
+
+    8px;
+
+
+    font-size:
+
+    15px;
+
+
+}
+
+
+
+
+
+.sidebar button:hover {
+
+
+    background:
+
+    #e3f2fd;
+
+
+    color:
+
+    var(--cor-principal);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   ÁREA PRINCIPAL
+================================== */
+
+
+main {
+
+
+    margin-left:
+
+    250px;
+
+
+    padding:
+
+    90px 25px 30px;
+
+
+}
+
+
+
+
+
+
+
+.page {
+
+
+    display:
+
+    none;
+
+
+}
+
+
+
+
+
+.page.active {
+
+
+    display:
+
+    block;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   CARTÕES
+================================== */
+
+
+.cards {
+
+
+    display:
+
+    grid;
+
+
+    grid-template-columns:
+
+    repeat(
+
+        auto-fit,
+
+        minmax(
+
+            200px,
+
+            1fr
+
+        )
+
+    );
+
+
+    gap:
+
+    20px;
+
+
+    margin-top:
+
+    20px;
+
+
+}
+
+
+
+
+
+
+
+.card {
+
+
+    background:
+
+    var(--cor-card);
+
+
+    padding:
+
+    20px;
+
+
+    border-radius:
+
+    12px;
+
+
+    box-shadow:
+
+    0 4px 12px rgba(
+
+        0,
+
+        0,
+
+        0,
+
+        .08
+
+    );
+
+
+    margin-bottom:
+
+    20px;
+
+
+}
+
+
+
+
+
+
+
+.card h3 {
+
+
+    margin-bottom:
+
+    10px;
+
+
+    color:
+
+    var(--cor-principal);
+
+
+}
+
+
+
+
+
+
+
+.card p {
+
+
+    font-size:
+
+    18px;
+
+
+    font-weight:
+
+    bold;
+
+
+}
+
+
+
+
+
+
+
+
+/* ==================================
+   DASHBOARD
+================================== */
+
+
+#ranking,
+
+
+#dashboardIndicadores,
+
+
+#alertasSistema,
+
+
+#atalhosRapidos {
+
+
+    margin-top:
+
+    25px;
+
+
+}
+
+
+
+
+
+
+
+.atalho {
+
+
+    cursor:
+
+    pointer;
+
+
+    transition:
+
+    .2s;
+
+
+}
+
+
+
+
+
+.atalho:hover {
+
+
+    transform:
+
+    translateY(
+
+        -3px
+
+    );
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   BOTÕES
+================================== */
+
+
+button {
+
+
+    transition:
+
+    .2s;
+
+
+}
+
+
+
+
+
+button:hover {
+
+
+    opacity:
+
+    .85;
+
+
+}
+
+
+
+
+
+
+
+
+/* ==================================
+   ALERTAS
+================================== */
+
+
+.alerta {
+
+
+    position:
+
+    fixed;
+
+
+    right:
+
+    20px;
+
+
+    bottom:
+
+    20px;
+
+
+    padding:
+
+    15px 20px;
+
+
+    border-radius:
+
+    8px;
+
+
+    color:
+
+    white;
+
+
+    z-index:
+
+    2000;
+
+
+}
+
+
+
+
+
+.alerta.sucesso {
+
+
+    background:
+
+    var(--cor-sucesso);
+
+
+}
+
+
+
+
+
+.alerta.erro {
+
+
+    background:
+
+    var(--cor-erro);
+
+
+}
+
+
+/* ==================================
+   DASHBOARD PROFISSIONAL
+================================== */
+
+
+
+.dashboard-grid {
+
+
+    display:
+
+    grid;
+
+
+    grid-template-columns:
+
+    repeat(
+
+        auto-fit,
+
+        minmax(
+
+            250px,
+
+            1fr
+
+        )
+
+    );
+
+
+    gap:
+
+    20px;
+
+
+}
+
+
+
+
+
+
+
+
+/* Cartões de estatísticas */
+
+
+.stat-card {
+
+
+    display:
+
+    flex;
+
+
+    align-items:
+
+    center;
+
+
+    justify-content:
+
+    space-between;
+
+
+    padding:
+
+    25px;
+
+
+}
+
+
+
+
+
+.stat-card .numero {
+
+
+    font-size:
+
+    32px;
+
+
+    font-weight:
+
+    bold;
+
+
+    color:
+
+    var(--cor-principal);
+
+
+}
+
+
+
+
+
+.stat-card .icone {
+
+
+    font-size:
+
+    35px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   RANKING
+================================== */
+
+
+.ranking-list {
+
+
+    list-style:
+
+    none;
+
+
+    padding:
+
+    0;
+
+
+}
+
+
+
+
+
+.ranking-list li {
+
+
+    display:
+
+    flex;
+
+
+    justify-content:
+
+    space-between;
+
+
+    align-items:
+
+    center;
+
+
+    padding:
+
+    12px;
+
+
+    margin-bottom:
+
+    8px;
+
+
+    background:
+
+    #f5f5f5;
+
+
+    border-radius:
+
+    8px;
+
+
+}
+
+
+
+
+
+body.dark .ranking-list li {
+
+
+    background:
+
+    #292929;
+
+
+}
+
+
+
+
+
+
+
+
+.posicao {
+
+
+    width:
+
+    30px;
+
+
+    height:
+
+    30px;
+
+
+    display:
+
+    flex;
+
+
+    align-items:
+
+    center;
+
+
+    justify-content:
+
+    center;
+
+
+    border-radius:
+
+    50%;
+
+
+    background:
+
+    var(--cor-principal);
+
+
+    color:
+
+    white;
+
+
+    font-weight:
+
+    bold;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   GRÁFICOS
+================================== */
+
+
+.grafico-container {
+
+
+    background:
+
+    var(--cor-card);
+
+
+    padding:
+
+    20px;
+
+
+    border-radius:
+
+    12px;
+
+
+    box-shadow:
+
+    0 4px 12px rgba(
+
+        0,
+
+        0,
+
+        0,
+
+        .08
+
+    );
+
+
+    margin-top:
+
+    20px;
+
+
+}
+
+
+
+
+
+canvas {
+
+
+    max-width:
+
+    100%;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   ALERTAS
+================================== */
+
+
+.alertas-container {
+
+
+    display:
+
+    flex;
+
+
+    flex-direction:
+
+    column;
+
+
+    gap:
+
+    10px;
+
+
+}
+
+
+
+
+
+.alerta-item {
+
+
+    padding:
+
+    15px;
+
+
+    border-radius:
+
+    10px;
+
+
+    background:
+
+    #fff3e0;
+
+
+    border-left:
+
+    5px solid #ef6c00;
+
+
+}
+
+
+
+
+
+body.dark .alerta-item {
+
+
+    background:
+
+    #3b2a00;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   NOTIFICAÇÕES
+================================== */
+
+
+.notificacao {
+
+
+    position:
+
+    fixed;
+
+
+    top:
+
+    80px;
+
+
+    right:
+
+    20px;
+
+
+    min-width:
+
+    280px;
+
+
+    padding:
+
+    15px;
+
+
+    border-radius:
+
+    10px;
+
+
+    color:
+
+    white;
+
+
+    animation:
+
+    aparecer .3s;
+
+
+    z-index:
+
+    3000;
+
+
+}
+
+
+
+
+
+.notificacao.sucesso {
+
+
+    background:
+
+    #2e7d32;
+
+
+}
+
+
+
+
+
+.notificacao.erro {
+
+
+    background:
+
+    #c62828;
+
+
+}
+
+
+
+
+
+.notificacao.info {
+
+
+    background:
+
+    #1565c0;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   PESQUISA GLOBAL
+================================== */
+
+
+.pesquisa-global {
+
+
+    display:
+
+    flex;
+
+
+    gap:
+
+    10px;
+
+
+    margin-bottom:
+
+    20px;
+
+
+}
+
+
+
+
+
+.pesquisa-global input {
+
+
+    flex:
+
+    1;
+
+
+}
+
+
+
+
+
+.resultados-pesquisa {
+
+
+    background:
+
+    white;
+
+
+    border-radius:
+
+    10px;
+
+
+    overflow:
+
+    hidden;
+
+
+}
+
+
+
+
+
+.resultado-item {
+
+
+    padding:
+
+    12px;
+
+
+    border-bottom:
+
+    1px solid #ddd;
+
+
+    cursor:
+
+    pointer;
+
+
+}
+
+
+
+
+
+.resultado-item:hover {
+
+
+    background:
+
+    #e3f2fd;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   STATUS ONLINE/OFFLINE
+================================== */
+
+
+.status {
+
+
+    display:
+
+    inline-flex;
+
+
+    align-items:
+
+    center;
+
+
+    gap:
+
+    8px;
+
+
+    padding:
+
+    6px 12px;
+
+
+    border-radius:
+
+    20px;
+
+
+    font-size:
+
+    13px;
+
+
+}
+
+
+
+
+
+.status.online {
+
+
+    background:
+
+    #e8f5e9;
+
+
+    color:
+
+    #2e7d32;
+
+
+}
+
+
+
+
+
+.status.offline {
+
+
+    background:
+
+    #ffebee;
+
+
+    color:
+
+    #c62828;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   UPLOAD DE FICHEIROS
+================================== */
+
+
+.upload-box {
+
+
+    border:
+
+    2px dashed #bbb;
+
+
+    padding:
+
+    30px;
+
+
+    text-align:
+
+    center;
+
+
+    border-radius:
+
+    12px;
+
+
+    cursor:
+
+    pointer;
+
+
+}
+
+
+
+
+
+.upload-box:hover {
+
+
+    border-color:
+
+    var(--cor-principal);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   FINAL
+================================== */
+
+
+.hidden {
+
+
+    display:
+
+    none !important;
+
+
+}
+
+
+/* ==================================
+   FORMULÁRIOS
+================================== */
+
+
+input,
+select,
+textarea {
+
+
+    width:
+
+    100%;
+
+
+    padding:
+
+    12px;
+
+
+    margin-bottom:
+
+    15px;
+
+
+    border:
+
+    1px solid #ddd;
+
+
+    border-radius:
+
+    8px;
+
+
+    outline:
+
+    none;
+
+
+    font-size:
+
+    15px;
+
+
+}
+
+
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+
+    border-color:
+
+    var(--cor-principal);
+
+
+}
+
+
+
+
+
+
+
+label {
+
+
+    display:
+
+    block;
+
+
+    margin-bottom:
+
+    6px;
+
+
+    font-weight:
+
+    600;
+
+
+}
+
+
+
+
+
+
+
+
+
+.formulario {
+
+
+    background:
+
+    white;
+
+
+    padding:
+
+    25px;
+
+
+    border-radius:
+
+    12px;
+
+
+    box-shadow:
+
+    0 4px 12px rgba(
+
+        0,
+
+        0,
+
+        0,
+
+        .08
+
+    );
+
+
+    max-width:
+
+    700px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   BOTÕES DO SISTEMA
+================================== */
+
+
+.btn {
+
+
+    padding:
+
+    12px 20px;
+
+
+    border:
+
+    none;
+
+
+    border-radius:
+
+    8px;
+
+
+    cursor:
+
+    pointer;
+
+
+    font-size:
+
+    15px;
+
+
+    margin:
+
+    5px;
+
+
+}
+
+
+
+
+
+.btn-primary {
+
+
+    background:
+
+    var(--cor-principal);
+
+
+    color:
+
+    white;
+
+
+}
+
+
+
+
+
+.btn-success {
+
+
+    background:
+
+    var(--cor-sucesso);
+
+
+    color:
+
+    white;
+
+
+}
+
+
+
+
+
+.btn-danger {
+
+
+    background:
+
+    var(--cor-erro);
+
+
+    color:
+
+    white;
+
+
+}
+
+
+
+
+
+.btn-secondary {
+
+
+    background:
+
+    #757575;
+
+
+    color:
+
+    white;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   TABELAS
+================================== */
+
+
+.table-container {
+
+
+    overflow-x:
+
+    auto;
+
+
+    background:
+
+    white;
+
+
+    padding:
+
+    15px;
+
+
+    border-radius:
+
+    12px;
+
+
+}
+
+
+
+
+
+table {
+
+
+    width:
+
+    100%;
+
+
+    border-collapse:
+
+    collapse;
+
+
+}
+
+
+
+
+
+thead {
+
+
+    background:
+
+    var(--cor-principal);
+
+
+    color:
+
+    white;
+
+
+}
+
+
+
+
+
+th,
+td {
+
+
+    padding:
+
+    12px;
+
+
+    text-align:
+
+    left;
+
+
+    border-bottom:
+
+    1px solid #ddd;
+
+
+}
+
+
+
+
+
+tbody tr:hover {
+
+
+    background:
+
+    #f5f5f5;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   LOGIN
+================================== */
+
+
+.login-container {
+
+
+    min-height:
+
+    100vh;
+
+
+    display:
+
+    flex;
+
+
+    align-items:
+
+    center;
+
+
+    justify-content:
+
+    center;
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #1565c0,
+
+        #0d47a1
+
+    );
+
+
+}
+
+
+
+
+
+
+
+.login-box {
+
+
+    background:
+
+    white;
+
+
+    width:
+
+    350px;
+
+
+    padding:
+
+    35px;
+
+
+    border-radius:
+
+    15px;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(
+
+        0,
+
+        0,
+
+        0,
+
+        .2
+
+    );
+
+
+}
+
+
+
+
+
+.login-box h2 {
+
+
+    text-align:
+
+    center;
+
+
+    margin-bottom:
+
+    25px;
+
+
+}
+
+
+
+
+
+.pin-input {
+
+
+    text-align:
+
+    center;
+
+
+    font-size:
+
+    25px;
+
+
+    letter-spacing:
+
+    10px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   PERFIS E ETIQUETAS
+================================== */
+
+
+.badge {
+
+
+    display:
+
+    inline-block;
+
+
+    padding:
+
+    5px 10px;
+
+
+    border-radius:
+
+    20px;
+
+
+    font-size:
+
+    12px;
+
+
+    font-weight:
+
+    bold;
+
+
+}
+
+
+
+
+
+.badge-admin {
+
+
+    background:
+
+    #e3f2fd;
+
+
+    color:
+
+    #1565c0;
+
+
+}
+
+
+
+
+
+.badge-professor {
+
+
+    background:
+
+    #e8f5e9;
+
+
+    color:
+
+    #2e7d32;
+
+
+}
+
+
+
+
+
+.badge-aluno {
+
+
+    background:
+
+    #fff3e0;
+
+
+    color:
+
+    #ef6c00;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   MATERIAIS
+================================== */
+
+
+.material-card {
+
+
+    display:
+
+    flex;
+
+
+    align-items:
+
+    center;
+
+
+    justify-content:
+
+    space-between;
+
+
+    gap:
+
+    15px;
+
+
+}
+
+
+
+
+
+.material-card a {
+
+
+    color:
+
+    var(--cor-principal);
+
+
+    text-decoration:
+
+    none;
+
+
+    font-weight:
+
+    bold;
+
+
+}
+
+
+
+
+
+.material-card a:hover {
+
+
+    text-decoration:
+
+    underline;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   PDF / DOCUMENTOS
+================================== */
+
+
+.documento {
+
+
+    padding:
+
+    20px;
+
+
+    background:
+
+    white;
+
+
+    border-radius:
+
+    10px;
+
+
+    margin-bottom:
+
+    15px;
+
+
+}
+
+
+
+
+
+.documento h3 {
+
+
+    color:
+
+    var(--cor-principal);
+
+
+}
+
+
+/* ==================================
+   MODO ESCURO
+================================== */
+
+
+body.dark {
+
+
+    --cor-fundo:
+
+    #121212;
+
+
+    --cor-card:
+
+    #1e1e1e;
+
+
+    --cor-texto:
+
+    #eeeeee;
+
+
+    background:
+
+    var(--cor-fundo);
+
+
+    color:
+
+    var(--cor-texto);
+
+
+}
+
+
+
+
+
+body.dark .card,
+body.dark .formulario,
+body.dark .table-container,
+body.dark .login-box,
+body.dark .documento {
+
+
+    background:
+
+    var(--cor-card);
+
+
+    color:
+
+    var(--cor-texto);
+
+
+}
+
+
+
+
+
+body.dark .sidebar {
+
+
+    background:
+
+    #1e1e1e;
+
+
+}
+
+
+
+
+
+body.dark .sidebar button {
+
+
+    color:
+
+    white;
+
+
+}
+
+
+
+
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+
+
+    background:
+
+    #2b2b2b;
+
+
+    color:
+
+    white;
+
+
+    border-color:
+
+    #555;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   ANIMAÇÕES
+================================== */
+
+
+.card {
+
+
+    animation:
+
+    aparecer .3s ease;
+
+
+}
+
+
+
+
+
+@keyframes aparecer {
+
+
+    from {
+
+
+        opacity:
+
+        0;
+
+
+        transform:
+
+        translateY(
+
+            10px
+
+        );
+
+
+    }
+
+
+
+    to {
+
+
+        opacity:
+
+        1;
+
+
+        transform:
+
+        translateY(
+
+            0
+
+        );
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* ==================================
+   LOADING
+================================== */
+
+
+.loading {
+
+
+    display:
+
+    flex;
+
+
+    align-items:
+
+    center;
+
+
+    justify-content:
+
+    center;
+
+
+    padding:
+
+    30px;
+
+
+}
+
+
+
+
+
+.spinner {
+
+
+    width:
+
+    40px;
+
+
+    height:
+
+    40px;
+
+
+    border:
+
+    4px solid #ddd;
+
+
+    border-top:
+
+    4px solid var(--cor-principal);
+
+
+    border-radius:
+
+    50%;
+
+
+    animation:
+
+    girar 1s linear infinite;
+
+
+}
+
+
+
+
+
+@keyframes girar {
+
+
+    from {
+
+
+        transform:
+
+        rotate(
+
+            0deg
+
+        );
+
+
+    }
+
+
+
+    to {
+
+
+        transform:
+
+        rotate(
+
+            360deg
+
+        );
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   RESPONSIVIDADE TABLET
+================================== */
+
+
+@media(max-width:900px){
+
+
+
+    .sidebar {
+
+
+        transform:
+
+        translateX(
+
+            -100%
+
+        );
+
+
+    }
+
+
+
+
+    .sidebar.open {
+
+
+        transform:
+
+        translateX(
+
+            0
+
+        );
+
+
+    }
+
+
+
+
+
+
+    main {
+
+
+        margin-left:
+
+        0;
+
+
+        padding:
+
+        85px 15px 20px;
+
+
+    }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   RESPONSIVIDADE TELEMÓVEL
+================================== */
+
+
+@media(max-width:600px){
+
+
+
+    .top-header {
+
+
+        height:
+
+        60px;
+
+
+        padding:
+
+        0 12px;
+
+
+    }
+
+
+
+
+
+
+
+    .logo h1 {
+
+
+        font-size:
+
+        22px;
+
+
+    }
+
+
+
+
+
+
+
+    .logo span {
+
+
+        display:
+
+        none;
+
+
+    }
+
+
+
+
+
+
+
+
+    .cards {
+
+
+        grid-template-columns:
+
+        1fr;
+
+
+    }
+
+
+
+
+
+
+
+    .card {
+
+
+        padding:
+
+        15px;
+
+
+    }
+
+
+
+
+
+
+
+    .formulario {
+
+
+        padding:
+
+        15px;
+
+
+    }
+
+
+
+
+
+
+
+    table {
+
+
+        font-size:
+
+        13px;
+
+
+    }
+
+
+
+
+
+
+
+    .login-box {
+
+
+        width:
+
+        90%;
+
+
+        padding:
+
+        25px;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+   IMPRESSÃO
+================================== */
+
+
+@media print {
+
+
+
+    .top-header,
+
+    .sidebar,
+
+    .menu-btn {
+
+
+        display:
+
+        none;
+
+
+    }
+
+
+
+
+
+
+    main {
+
+
+        margin:
+
+        0;
+
+
+        padding:
+
+        0;
+
+
+    }
+
+
+
+
+
+    .card {
+
+
+        box-shadow:
+
+        none;
+
+
+    }
+
+
+}

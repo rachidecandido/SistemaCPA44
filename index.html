@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>
+        Sistema CPA4 - Gestão Escolar
+    </title>
+
+
+    <!-- PWA -->
+
+    <link rel="manifest" href="manifest.json">
+
+
+    <meta name="theme-color" content="#1565c0">
+
+
+    <link rel="icon" href="icons/icon-192.png">
+
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<header class="top-header">
+
+
+    <div class="logo">
+
+        <h1>
+            CPA4
+        </h1>
+
+
+        <span>
+            Sistema de Gestão Escolar
+        </span>
+
+
+    </div>
+
+
+
+
+    <button 
+    id="menuBtn"
+    class="menu-btn">
+
+
+        ☰
+
+
+    </button>
+
+
+
+</header>
+
+
+
+
+
+
+
+<nav id="sidebar" class="sidebar">
+
+
+    <button data-page="dashboard">
+
+        📊 Dashboard
+
+    </button>
+
+
+
+    <button data-page="cpa">
+
+        📝 CPA
+
+    </button>
+
+
+
+    <button data-page="boletim">
+
+        📚 Boletim
+
+    </button>
+
+
+
+    <button data-page="escola">
+
+        🏫 Escola
+
+    </button>
+
+
+
+    <button data-page="materiais">
+
+        📂 Materiais
+
+    </button>
+
+
+
+    <button data-page="aluno">
+
+        👨‍🎓 Portal Aluno
+
+    </button>
+
+
+
+    <button data-page="admin">
+
+        ⚙️ Administração
+
+    </button>
+
+
+</nav>
+
+
+
+
+
+
+
+
+<main id="app">
+
+
+
+
+
+
+
+<!-- =================================
+     DASHBOARD
+================================= -->
+
+
+<section 
+id="dashboard"
+class="page active">
+
+
+
+<h2>
+
+Dashboard
+
+</h2>
+
+
+
+
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+
+<h3>
+
+Alunos
+
+</h3>
+
+
+<p id="totalAlunos">
+
+0
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+
+Turmas
+
+</h3>
+
+
+<p id="totalTurmas">
+
+0
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+
+Escolas
+
+</h3>
+
+
+<p id="totalEscolas">
+
+0
+
+</p>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Indicadores -->
+
+<div 
+id="dashboardIndicadores"
+class="cards">
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Estado Firebase -->
+
+
+<div class="card">
+
+
+<h3>
+
+Estado do Sistema
+
+</h3>
+
+
+
+<p>
+
+Firebase:
+
+<span 
+id="estadoFirebase"
+class="status offline">
+
+Offline
+
+</span>
+
+
+</p>
+
+
+
+
+
+<p>
+
+Data:
+
+<span id="dataHoraSistema">
+
+</span>
+
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Pesquisa Global -->
+
+
+<div class="card">
+
+
+<h3>
+
+Pesquisa Global
+
+</h3>
+
+
+
+<div class="pesquisa-global">
+
+
+<input
+
+id="pesquisaGlobal"
+
+type="text"
+
+placeholder="Pesquisar aluno, professor, escola..."
+
+>
+
+
+</div>
+
+
+
+
+
+<div
+
+id="resultadosPesquisa"
+
+class="resultados-pesquisa">
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Ranking -->
+
+
+<div id="ranking">
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Alertas -->
+
+
+<div id="alertasSistema">
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Gráfico -->
+
+
+<div class="card grafico-container">
+
+
+<h3>
+
+Estatísticas do Sistema
+
+</h3>
+
+
+
+<canvas id="graficoDashboard">
+
+</canvas>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Atalhos -->
+
+
+<div 
+id="atalhosRapidos"
+class="cards">
+
+
+</div>
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+<!-- =================================
+     CPA
+================================= -->
+
+
+<section
+
+id="cpa"
+
+class="page">
+
+
+<h2>
+
+Controle CPA
+
+</h2>
+
+
+<div id="cpaContent">
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =================================
+     BOLETIM
+================================= -->
+
+
+<section
+
+id="boletim"
+
+class="page">
+
+
+<h2>
+
+Boletim Escolar
+
+</h2>
+
+
+<div id="boletimContent">
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =================================
+     ESCOLA
+================================= -->
+
+
+<section
+
+id="escola"
+
+class="page">
+
+
+<h2>
+
+Gestão Escolar
+
+</h2>
+
+
+<div id="escolaContent">
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =================================
+     MATERIAIS
+================================= -->
+
+
+<section
+
+id="materiais"
+
+class="page">
+
+
+<h2>
+
+Materiais de Apoio
+
+</h2>
+
+
+<div id="materiaisContent">
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =================================
+     PORTAL ALUNO
+================================= -->
+
+
+<section
+
+id="aluno"
+
+class="page">
+
+
+<h2>
+
+Portal do Aluno / Encarregado
+
+</h2>
+
+
+<div id="alunoContent">
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =================================
+     ADMINISTRAÇÃO
+================================= -->
+
+
+<section
+
+id="admin"
+
+class="page">
+
+
+<h2>
+
+Painel Administrativo
+
+</h2>
+
+
+<div id="adminContent">
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+<!-- =================================
+     BIBLIOTECAS
+================================= -->
+
+
+<!-- PDF -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+
+<!-- Gráficos -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+
+
+
+
+
+
+<!-- =================================
+     MÓDULOS DO SISTEMA CPA4
+================================= -->
+
+
+<script type="module" src="js/state.js"></script>
+
+
+<script type="module" src="js/utils.js"></script>
+
+
+<script type="module" src="js/auth.js"></script>
+
+
+<script type="module" src="js/nav.js"></script>
+
+
+<script type="module" src="js/cpa.js"></script>
+
+
+<script type="module" src="js/boletim.js"></script>
+
+
+<script type="module" src="js/escola.js"></script>
+
+
+<script type="module" src="js/materiais.js"></script>
+
+
+<script type="module" src="js/aluno.js"></script>
+
+
+<script type="module" src="js/admin.js"></script>
+
+
+<script type="module" src="js/firebase.js"></script>
+
+
+<script type="module" src="js/pdf.js"></script>
+
+
+<script type="module" src="js/dashboard.js"></script>
+
+
+
+
+
+
+
+
+
+<!-- =================================
+     SERVICE WORKER PWA
+================================= -->
+
+
+<script>
+
+
+if(
+
+"serviceWorker" in navigator
+
+){
+
+
+
+window.addEventListener(
+
+"load",
+
+()=>{
+
+
+
+navigator.serviceWorker.register(
+
+"service-worker.js"
+
+)
+
+
+
+.then(
+
+()=>{
+
+
+console.log(
+
+"CPA4 PWA ativo"
+
+);
+
+
+}
+
+)
+
+
+
+
+
+.catch(
+
+erro=>{
+
+
+console.error(
+
+"Erro no Service Worker",
+
+erro
+
+);
+
+
+}
+
+);
+
+
+
+}
+
+);
+
+
+
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
